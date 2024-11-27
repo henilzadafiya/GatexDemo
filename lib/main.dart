@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:gatexdemo/api_calling.dart';
 import 'package:gatexdemo/home_screen.dart';
 import 'package:gatexdemo/languages.dart';
 import 'package:get/get.dart';
@@ -14,12 +13,20 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return GetMaterialApp(
       title: 'Flutter Demo',
-      theme: ThemeData(
-        primarySwatch: Colors.green, // Set the app's primary theme color
-      ),
-      home: APICall(),
+      home: const HomeScreen(),
     );
   }
+
+  // @override
+  // Widget build(BuildContext context) {
+  //   return MaterialApp(
+  //     title: 'Flutter Demo',
+  //     theme: ThemeData(
+  //       primarySwatch: Colors.green, // Set the app's primary theme color
+  //     ),
+  //     home: APICall(),
+  //   );
+  // }
 }
